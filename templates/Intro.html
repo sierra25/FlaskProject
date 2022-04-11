@@ -1,18 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Introduction</title>
-</head>
-<body>
-<h1>Hi, My Name Is Sierra Lovejoy 😊</h1>
-<p>
-    I am a Computer Science major with a minor in applied mathematics. I am currently 23 years old.
-    I am in my Senior year and currently have an Associates in Engineering and am now pursuing a
-    Bachelor's in computer science from Texas State. I plan to pursue a career in software development after graduating.
-    My class year to graduate is Spring 2022. In the future I hope to create websites and applications that help people’s
-    daily lives and to work on projects that add convenience and impact people in positive ways.My hobbies include
-    gardening, cooking and putting together jigsaw puzzles.
-</p>
-</body>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Login</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	</head>
+	<body>
+		<div class="login">
+			<h1>Login</h1>
+			<div class="links">
+				<a href="{{ url_for('login') }}" class="active">Login</a>
+				<a href="{{ url_for('register') }}">Register</a>
+			</div>
+			<form action="{{ url_for('login') }}" method="post">
+				<label for="username">
+					<i class="fas fa-user"></i>
+				</label>
+				<input type="text" name="username" placeholder="Username" id="username" required>
+				<label for="password">
+					<i class="fas fa-lock"></i>
+				</label>
+				<input type="password" name="password" placeholder="Password" id="password" required>
+				<div class="msg">{{ msg }}</div>
+				<input type="submit" value="Login">
+			</form>
+		</div>
+	</body>
 </html>
