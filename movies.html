@@ -9,7 +9,7 @@
 
     <style>
         body {
-            background-image: url("background.png");
+            background-image: url("movieBackground.jpg");
 
         }
 
@@ -65,13 +65,13 @@
 
             <ul class="navbar-nav">
                 <!-- Inline styling of Home navigation (Home link resets the page to default) -->
-                <li class="nav-item"><a class="nav-link" style="font-size: 2em" href="{{ url_for('logout') }}">Logout</a></li>
-                <li class="nav-item"><a class="nav-link" style="font-size: 2em" href="{{ url_for('movies') }}">Home</a></li>
-                <li class="nav-item"><a class="nav-link" style="font-size: 2em" href="{{ url_for('history') }}">History</a></li>
+                <li class="nav-item"><a class="nav-link" style="font-size: 2em" href="login.html">Logout</a></li>
+                <li class="nav-item"><a class="nav-link" style="font-size: 2em" href="movies.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" style="font-size: 2em" href="history.html">History</a></li>
             </ul>
         </div>
         <!-- Include filters and search field in a form and link the form to the movies function -->
-        <form action="{{ url_for('movies') }}" method="POST">
+        <form action="movies.html" method="POST">
             <!-- Bootstrap Input group class -->
             <div class="input-group mb-3 input-group-sm">
                 <!-- Sort Filter implemented using Select element -->
